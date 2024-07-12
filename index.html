@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP TRENDS - What's trending now?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #000000;
+            color: #ffd700;
+            padding: 10px 0;
+            position: relative;
+        }
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+        }
+        .menu-icon {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 1.5em;
+            color: #ffd700;
+        }
+        .auth-buttons {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        .dropbtn {
+            background-color: #ffd700;
+            color: #000000;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #e6c200;
+        }
+        .subheader {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #ffd700;
+        }
+        .content {
+            display: flex;
+            margin-top: 20px;
+        }
+        .categories, .popular {
+            flex: 1;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .main-content {
+            flex: 3;
+            margin: 0 20px;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product-item {
+            background-color: #2a2a2a;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .dollar-sign {
+            position: fixed;
+            opacity: 0.1;
+            font-size: 100px;
+            z-index: -1;
+            color: #ffd700;
+        }
+        #deal-of-day {
+            background-color: #ffd700;
+            color: #000000;
+            text-align: center;
+            padding: 10px;
+            animation: blink 2s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="deal-of-day">Deal of the Day: 50% off all VIP items!</div>
+    <header>
+        <div class="container">
+            <div class="menu-icon">☰</div>
+            <div class="logo">VIP TRENDS</div>
+            <div class="auth-buttons">
+                <div class="dropdown">
+                    <button class="dropbtn">Sign In</button>
+                    <div class="dropdown-content">
+                        <a href="#">Option 1</a>
+                        <a href="#">Option 2</a>
+                        <a href="#">Option 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Sign Up</button>
+                    <div class="dropdown-content">
+                        <a href="#">Option 1</a>
+                        <a href="#">Option 2</a>
+                        <a href="#">Option 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Help</button>
+                    <div class="dropdown-content">
+                        <a href="#">FAQ</a>
+                        <a href="#">Support</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Contact Us</button>
+                    <div class="dropdown-content">
+                        <a href="#">Email</a>
+                        <a href="#">Phone</a>
+                        <a href="#">Chat</a>
+                    </div>
+                </div>
+            </div>
+            <div class="subheader">What's trending now?</div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <div class="categories">
+                <h2>Categories</h2>
+                <ul>
+                    <li>Clothes</li>
+                    <li>Shoes</li>
+                    <li>Accessories</li>
+                    <li>Electronics</li>
+                    <li>Outdoors</li>
+                    <li>Sports</li>
+                    <li>Tools</li>
+                    <li>Toys</li>
+                    <li>Kitchen</li>
+                    <li>Bath</li>
+                    <li>Body Products</li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <h2>Trending Items</h2>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/150" alt="Product 1">
+                        <h3>Product 1</h3>
+                        <p>$19.99</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/150" alt="Product 2">
+                        <h3>Product 2</h3>
+                        <p>$29.99</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/150" alt="Product 3">
+                        <h3>Product 3</h3>
+                        <p>$39.99</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/150" alt="Product 4">
+                        <h3>Product 4</h3>
+                        <p>$49.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="popular">
+                <h2>Popular</h2>
+                <ul>
+                    <li>Popular Item 1</li>
+                    <li>Popular Item 2</li>
+                    <li>Popular Item 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addDollarSigns() {
+            for (let i = 0; i < 10; i++) {
+                let dollarSign = document.createElement('div');
+                dollarSign.className = 'dollar-sign';
+                dollarSign.textContent = '$';
+                dollarSign.style.left = Math.random() * 100 + 'vw';
+                dollarSign.style.top = Math.random() * 100 + 'vh';
+                document.body.appendChild(dollarSign);
+            }
+        }
+
+        window.onload = addDollarSigns;
+    </script>
+</body>
+</html>
